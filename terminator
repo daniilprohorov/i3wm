@@ -1,0 +1,53 @@
+[global_config]
+  title_inactive_bg_color = "#000000"
+  title_transmit_bg_color = "#000000"
+  title_transmit_fg_color = "#000000"
+  title_use_system_font = False
+[keybindings]
+  hide_window = <Shift><Control>a
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      size = 680, 540
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.2
+    background_type = transparent
+    cursor_color = "#eee8d5"
+    font = Monospace 10
+    foreground_color = "#839496"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollback_infinite = True
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[monokai]]
+    allow_bold = False
+    background_color = "#0d0d0d"
+    cursor_color = "#ffffff"
+    font = DejaVu Sans Mono 10
+    foreground_color = "#ffffff"
+    palette = "#000000:#f92672:#6cc72c:#fe9720:#5f91ef:#9358fe:#36af90:#8c8c8c:#4c4c4c:#ff80f4:#a7e22e:#ffee99:#5fd9ef:#ae82fe:#66efd5:#c7cece"
+    use_system_font = False
+  [[new]]
+    background_color = "#2e3436"
+    background_darkness = 0.1
+    background_type = transparent
+    cursor_color = "#eee8d5"
+    font = Source Code Pro for Powerline Medium 10
+    foreground_color = "#ffffff"
+    palette = "#000000:#aa0000:#00ff01:#aa5500:#c5ffff:#aa00aa:#00aaaa:#00ff01:#555555:#ff5555:#00ff01:#ffff55:#c5ffff:#ff55ff:#55ffff:#ffffff"
+    scrollback_infinite = True
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
