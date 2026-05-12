@@ -1,14 +1,12 @@
 # Zed keybindings for programming
 
-Цель: маленькая раскладка для Zed + macOS + Vim mode, без двойственности между `Cmd` и leader-командами.
+Цель: маленькая раскладка для Zed + macOS + Vim mode, где `Cmd` остается единственным leader key для основных команд.
 
 Основная идея:
 
-- `Space` в normal mode - leader, как в Spacemacs.
+- `Cmd` - leader key для основных команд.
 - Все основные команды идут через leader.
 - Буквы в биндингах считаются английскими, а рядом указан русский эквивалент той же физической клавиши.
-- Стрелки используются для перемещения между окнами/панелями.
-- В Vim mode переходы по стрелкам отключаются, чтобы стрелки не дублировали `h/j/k/l`.
 
 ## Базовый принцип
 
@@ -23,60 +21,47 @@
 7. переименовать символ;
 8. открыть терминал;
 9. переключиться между редактором, деревом, git и AI;
-10. быстро двигаться между окнами.
 
 ## Leader-команды
 
 | Биндинг | Команда | Логика |
 | --- | --- | --- |
-| `Space f` (`Space а`) | Find file | `f` = file. Быстро открыть файл в проекте. |
-| `Space /` (`Space .`) | Project search | `/` = поиск по всему проекту. На русской раскладке это та же клавиша, что `.`. |
-| `Space d` (`Space в`) | Go to definition | `d` = definition. Перейти к определению функции, типа, переменной. |
-| `Space b` (`Space и`) | Go back | `b` = back. Вернуться назад по истории переходов. |
-| `Space n` (`Space т`) | Go forward | `n` = next. Перейти вперед по истории переходов. |
-| `Space r` (`Space к`) | Find references | `r` = references. Найти использования символа. |
-| `Space R` (`Space К`) | Rename symbol | Большая `R` = rename. Переименовать символ через LSP. |
-| `Space t` (`Space е`) | Toggle terminal | `t` = terminal. Открыть или скрыть терминал. |
-| `Space e` (`Space у`) | Toggle file tree | `e` = explorer. Перейти к файловому дереву или скрыть его. |
-| `Space g` (`Space п`) | Toggle git panel | `g` = git. Открыть или скрыть git-панель. |
-| `Space a` (`Space ф`) | Toggle AI panel | `a` = agent / AI. Открыть или скрыть панель AI-агента. |
-| `Space x` (`Space ч`) | Command palette | `x` = execute. Открыть палитру команд, когда нужной команды нет в раскладке. |
+| `Cmd f` (`Cmd а`) | Find file | `f` = file. Быстро открыть файл в проекте. |
+| `Cmd p` (`Cmd з`) | Project search | `p` = поиск по всему проекту. |
+| `Cmd d` (`Cmd в`) | Go to definition | `d` = definition. Перейти к определению функции, типа, переменной. |
+| `Cmd b` (`Cmd и`) | Go back | `b` = back. Вернуться назад по истории переходов. |
+| `Cmd n` (`Cmd т`) | Go forward | `n` = next. Перейти вперед по истории переходов. |
+| `Cmd r` (`Cmd к`) | Find references | `r` = references. Найти использования символа. |
+| `Cmd R` (`Cmd К`) | Rename symbol | Большая `R` = rename. Переименовать символ через LSP. |
+| `Cmd t` (`Cmd е`) | Toggle terminal | `t` = terminal. Открыть и сфокусировать терминал или закрыть его. |
+| `Cmd e` (`Cmd у`) | Toggle file tree | `e` = explorer. Открыть и сфокусировать файловое дерево или закрыть его. |
+| `Cmd g` (`Cmd п`) | Toggle git panel | `g` = git. Открыть и сфокусировать git-панель или закрыть ее. |
+| `Cmd a` (`Cmd ф`) | Open Codex in terminal | `a` = assistant. Открыть терминал (dock справа) и запустить `codex` через task. |
+| `Cmd x` (`Cmd ч`) | Command palette | `x` = execute. Открыть палитру команд, когда нужной команды нет в раскладке. |
 
 Этого набора достаточно как основной рабочей карты. Если через пару недель какая-то команда не используется, ее лучше убрать, а не расширять список.
-
-## Навигация между окнами
-
-Стрелки в Vim mode лучше освободить от перемещения курсора и использовать для фокуса между окнами/панелями.
-
-| Биндинг | Команда |
-| --- | --- |
-| `Left` | Focus pane left |
-| `Down` | Focus pane down |
-| `Up` | Focus pane up |
-| `Right` | Focus pane right |
-
-Так получается приятное разделение:
-
-- `h/j/k/l` - движение курсора внутри файла;
-- стрелки - движение фокуса между окнами;
-- мышка - редкие действия с layout, например создание или изменение сплитов.
 
 ## Панели
 
 Отдельные панели остаются на простых leader-командах:
 
+Все toggle-команды для панелей работают одинаково:
+
+- если панель закрыта, команда открывает ее и переводит фокус внутрь;
+- если панель уже открыта, команда закрывает ее.
+
 | Биндинг | Панель |
 | --- | --- |
-| `Space e` (`Space у`) | File tree |
-| `Space g` (`Space п`) | Git |
-| `Space a` (`Space ф`) | AI agent |
-| `Space t` (`Space е`) | Terminal |
+| `Cmd e` (`Cmd у`) | File tree |
+| `Cmd g` (`Cmd п`) | Git |
+| `Cmd a` (`Cmd ф`) | Codex (terminal task) |
+| `Cmd t` (`Cmd е`) | Terminal |
 
 Эта группа легко запоминается:
 
 - `e` - explorer;
 - `g` - git;
-- `a` - agent;
+- `a` - assistant (codex);
 - `t` - terminal.
 
 ## Русская и английская раскладка
@@ -107,18 +92,17 @@
 
 | Биндинг | Команда |
 | --- | --- |
-| `Space f` (`Space а`) | Find file |
-| `Space /` (`Space .`) | Project search |
-| `Space d` (`Space в`) | Go to definition |
-| `Space b` (`Space и`) | Go back |
-| `Space n` (`Space т`) | Go forward |
-| `Space r` (`Space к`) | Find references |
-| `Space R` (`Space К`) | Rename symbol |
-| `Space t` (`Space е`) | Toggle terminal |
-| `Space e` (`Space у`) | Toggle file tree |
-| `Space g` (`Space п`) | Toggle git panel |
-| `Space a` (`Space ф`) | Toggle AI panel |
-| `Space x` (`Space ч`) | Command palette |
-| `Left / Down / Up / Right` | Move focus between panes |
+| `Cmd f` (`Cmd а`) | Find file |
+| `Cmd p` (`Cmd з`) | Project search |
+| `Cmd d` (`Cmd в`) | Go to definition |
+| `Cmd b` (`Cmd и`) | Go back |
+| `Cmd n` (`Cmd т`) | Go forward |
+| `Cmd r` (`Cmd к`) | Find references |
+| `Cmd R` (`Cmd К`) | Rename symbol |
+| `Cmd t` (`Cmd е`) | Toggle terminal |
+| `Cmd e` (`Cmd у`) | Toggle file tree |
+| `Cmd g` (`Cmd п`) | Toggle git panel |
+| `Cmd a` (`Cmd ф`) | Open Codex in terminal |
+| `Cmd x` (`Cmd ч`) | Command palette |
 
 Сплиты, resize и редкие layout-действия лучше оставить мышке. Так раскладка не превращается в отдельный язык, который нужно учить вместо работы.

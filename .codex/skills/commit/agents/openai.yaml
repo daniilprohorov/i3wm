@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: Commit Assistant
+  short_description: Proposes a commit message and runs only git commit -m.
+  default_prompt: Use gpt-5.4-mini, create a concise commit message, and execute only git commit -m "<message>".
