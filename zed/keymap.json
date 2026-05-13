@@ -29,7 +29,8 @@
   {
     "context": "Dock > Terminal",
     "bindings": {
-      "cmd t": "workspace::CloseActiveDock"
+      "cmd t": "workspace::CloseActiveDock",
+      "cmd a": ["task::Spawn", { "task_name": "open codex" }]
     }
   },
   {

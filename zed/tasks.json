@@ -2,8 +2,17 @@
   {
     "label": "open codex",
     "command": "codex",
-    "use_new_terminal": false,
+    "shell": {
+      "with_arguments": {
+        "program": "/bin/zsh",
+        "args": [
+          "-lc"
+        ]
+      }
+    },
+    "use_new_terminal": true,
     "allow_concurrent_runs": false,
+    "reveal_target": "dock",
     "reveal": "always",
     "hide": "never"
   }

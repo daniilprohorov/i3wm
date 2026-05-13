@@ -33,10 +33,19 @@
   "project_panel": {
     "dock": "left"
   },
+  "git_panel": {
+    "dock": "left"
+  },
   "terminal": {
     "dock": "right"
   },
   "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-5.5",
+      "enable_thinking": false
+    },
     "dock": "right"
   }
 }
